@@ -1,0 +1,32 @@
+server:
+  port: 90
+
+spring:
+  application:
+    name: cloud-consumner-order
+
+eureka:
+  client:
+    #客户端不用注册进服务中心
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+
+#openFegin 3.0.1 版本设置
+feign:
+  client:
+    config:
+      default:
+        #指的是建立连接所用的时间，适用于网络状况正常的情况下,两端连接所用的时间
+        connectTimeout: 5000
+        #指的是建立连接后从服务器读取到可用资源所用的时间
+        readTimeout: 5000
+        #设置日志的级别
+        loggerLevel: FULL
+
+logging:
+  level:
+    # feign日志以什么级别监控哪个接口
+    # 可以使用通配符
+    com.xh.springcloud.service.PaymentFeignService: debug

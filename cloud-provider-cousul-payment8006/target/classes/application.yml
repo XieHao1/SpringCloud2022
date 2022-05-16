@@ -1,0 +1,20 @@
+server:
+  port: 8006
+
+spring:
+  application:
+    name: cloud-provider-payment
+  #consul注册中心地址
+  cloud:
+    consul:
+      host: 121.41.112.246
+      port: 8500
+      discovery:
+        #微服务ip地址
+        hostname: 127.0.0.1
+        #发现服务的名字，默认为微服务名称
+        service-name: ${spring.application.name}
+        #首选ip地址
+        prefer-ip-address: true
+        heartbeat:
+          enabled: true
