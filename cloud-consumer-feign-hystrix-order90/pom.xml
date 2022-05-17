@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-eureka-server7001</artifactId>
+    <artifactId>cloud-consumer-feign-hystrix-order90</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -17,6 +17,34 @@
     </properties>
 
     <dependencies>
+
+        <!-- hystrix -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <version>2.2.10.RELEASE</version>
+        </dependency>
+
+        <!-- springCloud 2021.0.1版本 - openfeign 3.1.1-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!-- 2021.0.1 springCloud版本 eureka-client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <dependency>
+            <!--  自己的公共接口地址   -->
+            <groupId>com.xh</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -39,21 +67,5 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <!--  自己的公共接口地址   -->
-            <groupId>com.xh</groupId>
-            <artifactId>cloud-api-commons</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-        <!-- 2021.0.1 springCloud版本 eureka-server-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-            <version>3.1.1</version>
-        </dependency>
-
     </dependencies>
-
 </project>

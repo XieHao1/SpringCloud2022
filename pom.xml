@@ -22,6 +22,8 @@
     <module>cloud-provider-cousul-payment8006</module>
       <module>cloud-consumer-consul-order90</module>
       <module>cloud-consumer-feign-order90</module>
+      <module>cloud-provider-hygtrix-payment8001</module>
+      <module>cloud-consumer-feign-hystrix-order90</module>
   </modules>
 
   <!--统一管理jar包版本-->
