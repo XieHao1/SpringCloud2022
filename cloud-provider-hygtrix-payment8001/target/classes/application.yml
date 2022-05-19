@@ -12,4 +12,11 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka
   instance:
-    nstance-id: payment8001
+    instance-id: payment8001
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # "*" 监视所有
+        include: hystrix.stream
