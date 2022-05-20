@@ -16,12 +16,15 @@
         <module name="cloud-eureka-server7002" />
         <module name="cloud-consumer-feign-hystrix-order90" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
+        <module name="cloud-config-center-3344" />
         <module name="cloud-provider-zookeeper-payment8004" />
         <module name="cloud-gateway-gateway9527" />
         <module name="cloud-consumer-consul-order90" />
         <module name="cloud-provider-hygtrix-payment8001" />
         <module name="cloud-consumer-order90" />
         <module name="cloud-consumer-feign-order90" />
+        <module name="cloud-config-client-3355" />
+        <module name="cloud-config-client-3366" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
