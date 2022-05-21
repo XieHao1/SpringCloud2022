@@ -6,6 +6,27 @@ spring:
   application:
     name: cloud-payment-service
 
+  zipkin:
+    enabled: true
+    #监控的的可视化地址
+    base-url: http://121.41.112.246:9411/
+    # 不注册成一个服务
+    discovery-client-enabled: false
+    sebder:
+      #  数据传输方式，web 表示以 HTTP 报文的形式向服务端发送数据，还有kafka 、ACTIVEMQ 等
+      type: web
+    locator:
+      discovery:
+        enabled: true
+  sleuth:
+    web:
+      client:
+        # 是否启用 webClient
+        enable: true
+    sampler:
+      #采样率值介于 0 到 1 之间，1 则表示全部采集
+      probability: 1
+
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -28,7 +49,7 @@ eureka:
 #      defaultZone: http://localhost:7001/eureka
     #集群,eureka之间会相互复制消息，配置一个也可以
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+      defaultZone: http://eureka7001.com:7001/eureka
     #添加此处
   instance:
     #机名称：服务名称修改

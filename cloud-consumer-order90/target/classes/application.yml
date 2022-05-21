@@ -5,21 +5,41 @@ server:
 spring:
   application:
     name: cloud-consumner-order
-  cloud:
-    zookeeper:
-      connect-string: 121.41.112.246:2181
+  zipkin:
+    enabled: true
+    #监控的的可视化地址
+    base-url: http://121.41.112.246:9411/
+    # 不注册成一个服务
+    discovery-client-enabled: false
+    sebder:
+      #  数据传输方式，web 表示以 HTTP 报文的形式向服务端发送数据，还有kafka 、ACTIVEMQ 等
+      type: web
+    locator:
+      discovery:
+        enabled: true
+  sleuth:
+    web:
+      client:
+        # 是否启用 webClient
+        enable: true
+    sampler:
+      #采样率值介于 0 到 1 之间，1 则表示全部采集
+      probability: 1
+#  cloud:
+#    zookeeper:
+#      connect-string: 121.41.112.246:2181
 
 
 
-#eureka:
-#  client:
-#    #表示是否将自己注册进Eureka-server默认为true。
-#    register-with-eureka: true
-#    #是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
-#    fetchRegistry: true
-#    #    service-url:
-#    #      defaultZone: http://localhost:7001/eureka
-#    #集群,eureka之间会相互复制消息，配置一个也可以
-#    service-url:
-#      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
-#
+eureka:
+  client:
+    #表示是否将自己注册进Eureka-server默认为true。
+    register-with-eureka: true
+    #是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetchRegistry: true
+    #    service-url:
+    #      defaultZone: http://localhost:7001/eureka
+    #集群,eureka之间会相互复制消息，配置一个也可以
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+
