@@ -12,14 +12,14 @@
 
   <!-- 子module-->
   <modules>
-    <module>cloud-provider-payment8001</module>
-    <module>cloud-consumer-order90</module>
-    <module>cloud-api-commons</module>
-    <module>cloud-eureka-server7001</module>
-    <module>cloud-eureka-server7002</module>
-    <module>cloud-provider-payment8002</module>
-    <module>cloud-provider-zookeeper-payment8004</module>
-    <module>cloud-provider-cousul-payment8006</module>
+      <module>cloud-provider-payment8001</module>
+      <module>cloud-consumer-order90</module>
+      <module>cloud-api-commons</module>
+      <module>cloud-eureka-server7001</module>
+      <module>cloud-eureka-server7002</module>
+      <module>cloud-provider-payment8002</module>
+      <module>cloud-provider-zookeeper-payment8004</module>
+      <module>cloud-provider-cousul-payment8006</module>
       <module>cloud-consumer-consul-order90</module>
       <module>cloud-consumer-feign-order90</module>
       <module>cloud-provider-hygtrix-payment8001</module>
@@ -32,6 +32,10 @@
       <module>cloud-stream-rabbitmq-provider8801</module>
     <module>cloud-stream-rabbitmq-consumer8802</module>
     <module>cloud-stream-rabbitmq-consumer8803</module>
+    <module>cloudalibaba-provider-payment9001</module>
+    <module>cloudalibaba-provider-payment9002</module>
+    <module>cloudalibaba-consumer-nacos-order83</module>
+    <module>cloudalibaba-config-nacos-client3377</module>
   </modules>
 
   <!--统一管理jar包版本-->
@@ -70,13 +74,13 @@
       </dependency>
 
       <!--spring cloud alibaba-->
-      <dependency>
-        <groupId>com.alibaba.cloud</groupId>
-        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-        <version>2.1.0.RELEASE</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
+        <dependency>
+          <groupId>com.alibaba.cloud</groupId>
+          <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+          <version>2021.0.1.0</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
 
       <!--mysql-->
       <dependency>
