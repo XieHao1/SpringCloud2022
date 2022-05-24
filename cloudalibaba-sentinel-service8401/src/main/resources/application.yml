@@ -1,0 +1,25 @@
+server:
+  port: 8401
+
+spring:
+  application:
+    name: cloudalibaba-sentinel-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.41.112.246:8848
+    #sentinel配置
+    sentinel:
+      transport:
+        #配置Sentinel dashboard地址,最好和监视处于同一个ip
+        dashboard: 127.0.0.1:8080
+        #sentinel 后台监控的端口 sentinel会启动一个http server端口和dashoard进行通信
+        #默认8719端口，假如端口被占用，就自动从8719端口进行+1扫描，直到找到未被占用的端口
+        port: 8719
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
