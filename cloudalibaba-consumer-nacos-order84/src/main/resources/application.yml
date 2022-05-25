@@ -1,0 +1,29 @@
+server:
+  port: 84
+
+spring:
+  application:
+    name: nacos-order-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.41.112.246:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+
+feign:
+  client:
+    config:
+      default:
+        #指的是建立连接所用的时间，适用于网络状况正常的情况下,两端连接所用的时间
+        connectTimeout: 5000
+        #指的是建立连接后从服务器读取到可用资源所用的时间
+        readTimeout: 5000
+  #激活Sentinel对Feign的支持
+  sentinel:
+    enabled: true
+  #开启服务降级
+  circuitbreaker:
+    enabled: true
