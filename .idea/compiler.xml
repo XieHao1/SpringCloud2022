@@ -10,6 +10,7 @@
         <module name="springcloud" />
         <module name="cloud-eureka-server7001" />
         <module name="cloud-eureka-server7002" />
+        <module name="seata-order-service2001" />
         <module name="cloudalibaba-consumer-nacos-order84" />
         <module name="cloud-stream-rabbitmq-provider8801" />
         <module name="cloud-stream-rabbitmq-consumer8802" />
@@ -32,6 +33,9 @@
         <module name="cloudalibaba-provider-payment9001" />
         <module name="cloud-gateway-gateway9527" />
         <module name="cloudalibaba-consumer-nacos-order83" />
+        <module name="seata-account-service2003" />
+        <module name="seata- storage - service2002" />
+        <module name="seata-storage-service2002" />
         <module name="cloud-consumer-consul-order90" />
         <module name="cloudalibaba-sentinel-service8401" />
         <module name="cloud-consumer-feign-order90" />
@@ -40,6 +44,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="module cloudalibaba-config-nacos-client3377" target="1.8" />
+      <module name="seata- account- service2003" target="1.8" />
+      <module name="seata- storage - service2002" target="1.8" />
       <module name="springcloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>

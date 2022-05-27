@@ -6,7 +6,7 @@
         <option name="generateConfig">
           <GenerateConfig>
             <option name="annotationType" value="NONE" />
-            <option name="basePackage" value="generator" />
+            <option name="basePackage" value="com.xh.seata" />
             <option name="basePath" value="src/main/java" />
             <option name="classNameStrategy" value="camel" />
             <option name="encoding" value="UTF-8" />
@@ -15,8 +15,8 @@
             <option name="ignoreFieldSuffix" value="" />
             <option name="ignoreTablePrefix" value="" />
             <option name="ignoreTableSuffix" value="" />
-            <option name="moduleName" value="cloud-provider-payment8001" />
-            <option name="modulePath" value="$PROJECT_DIR$/cloud-provider-payment8001" />
+            <option name="moduleName" value="seata-account-service2003" />
+            <option name="modulePath" value="$PROJECT_DIR$/seata-account-service2003" />
             <option name="moduleUIInfoList">
               <list>
                 <ModuleInfoGo>
@@ -25,8 +25,8 @@
                   <option name="encoding" value="${domain.encoding}" />
                   <option name="fileName" value="${domain.fileName}Mapper" />
                   <option name="fileNameWithSuffix" value="${domain.fileName}Mapper.java" />
-                  <option name="modulePath" value="$PROJECT_DIR$/cloud-provider-payment8001" />
-                  <option name="packageName" value="${domain.basePackage}.mapper" />
+                  <option name="modulePath" value="$PROJECT_DIR$/seata-account-service2003" />
+                  <option name="packageName" value="com.xh.seata.dao" />
                 </ModuleInfoGo>
                 <ModuleInfoGo>
                   <option name="basePath" value="src/main/resources" />
@@ -34,7 +34,7 @@
                   <option name="encoding" value="${domain.encoding}" />
                   <option name="fileName" value="${domain.fileName}Mapper" />
                   <option name="fileNameWithSuffix" value="${domain.fileName}Mapper.xml" />
-                  <option name="modulePath" value="$PROJECT_DIR$/cloud-provider-payment8001" />
+                  <option name="modulePath" value="$PROJECT_DIR$/seata-account-service2003" />
                   <option name="packageName" value="mapper" />
                 </ModuleInfoGo>
                 <ModuleInfoGo>
@@ -43,7 +43,7 @@
                   <option name="encoding" value="${domain.encoding}" />
                   <option name="fileName" value="${domain.fileName}ServiceImpl" />
                   <option name="fileNameWithSuffix" value="${domain.fileName}ServiceImpl.java" />
-                  <option name="modulePath" value="$PROJECT_DIR$/cloud-provider-payment8001" />
+                  <option name="modulePath" value="$PROJECT_DIR$/seata-account-service2003" />
                   <option name="packageName" value="${domain.basePackage}.service.impl" />
                 </ModuleInfoGo>
                 <ModuleInfoGo>
@@ -52,7 +52,7 @@
                   <option name="encoding" value="${domain.encoding}" />
                   <option name="fileName" value="${domain.fileName}Service" />
                   <option name="fileNameWithSuffix" value="${domain.fileName}Service.java" />
-                  <option name="modulePath" value="$PROJECT_DIR$/cloud-provider-payment8001" />
+                  <option name="modulePath" value="$PROJECT_DIR$/seata-account-service2003" />
                   <option name="packageName" value="${domain.basePackage}.service" />
                 </ModuleInfoGo>
               </list>
@@ -64,15 +64,15 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="Payment" />
-                  <option name="tableName" value="payment" />
+                  <option name="className" value="Account" />
+                  <option name="tableName" value="t_account" />
                 </TableUIInfo>
               </list>
             </option>
             <option name="templatesName" value="mybatis-plus2" />
           </GenerateConfig>
         </option>
-        <option name="moduleName" value="cloud-provider-payment8001" />
+        <option name="moduleName" value="seata-account-service2003" />
         <option name="projectPath" value="$PROJECT_DIR$" />
         <option name="templateName" value="mybatis-plus2" />
       </TemplateContext>
